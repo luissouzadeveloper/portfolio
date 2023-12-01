@@ -1,0 +1,219 @@
+/* Reset CSS */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Variaveis de CSS */
+:root{
+    --cor1: #000;
+    --cor2: #fff;
+    --cor3: #4469ef;
+
+    --fonte: Arial, Helvetica, sans-serif;
+}
+
+/* Body */
+body{
+    background-color: #222;
+    font-family: var(--fonte);
+}
+
+/* Cabeçalho e menu do site */
+.cabecalho{
+    background-color: var(--cor1);
+    padding: 25px 15px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 10;
+}
+.cabecalho > .logo{
+    color: #a1a1a1;
+    letter-spacing: .1em;
+}
+.cabecalho > .menu-desktop a{
+    color: #a1a1a1;
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 5px;
+    border-radius: 10px;
+    transition: all 400ms ease-in-out;
+}
+.cabecalho > .menu-desktop a:hover, .menu-mobile a:hover{
+    background-color: var(--cor2);
+    color: #858585;
+    
+}
+
+/* Menu mobile */
+.menu-mobile{
+    background-color: var(--cor1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 100px;
+    left: 5px;
+    border-radius: 10px;
+    padding: 30px 10px;
+    transition: all 500ms ease-in-out;
+    opacity: 0;
+    margin-left: -100px;
+    z-index: 9;
+}
+.menu-mobile > a{
+    color: #a1a1a1;
+    font-size: 1.2em;
+    text-decoration: none;
+    line-height: 1.5;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 10px;
+    transition: all 600ms ease-in-out;
+}
+.botao-menu{
+    display: none;
+}
+.botao-menu button{
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--cor2);
+    cursor: pointer;
+}
+.botao-menu button i{
+    color: var(--cor2);
+}
+
+/* Principal */
+main{
+    border: 2px solid blue;
+}
+
+/* Seções */
+section{
+    background-color: var(--cor2);
+    padding: 30px 15px;
+}
+
+/* Subtítulo */
+.subtitulo-h2{
+    font-size: 2.5em;
+    color: var(--cor3);
+    margin-bottom: 20px;
+}
+
+/* Centralizações */
+.centraliza{
+    text-align: center;
+}
+
+.espaco{
+    height: 11vh;
+}
+
+/* Container de apresentação */
+.nome-apresentacao{
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/background.jpg);
+    background-position: center;
+    background-attachment: fixed;
+}
+.nome-apresentacao > h1{
+    color: var(--cor2);
+    font-size: 3em;
+    margin-bottom: 30px;
+}
+.nome-apresentacao > p{
+    color: var(--cor2);
+    font-size: 2em;
+    letter-spacing: 2.5px;
+}
+
+/* Sobre */
+.sobre > p{
+    line-height: 1.5;
+    text-align: center;
+    font-size: 1.2em;
+}
+.sobre > button{
+    background-color: var(--cor3);
+    border: none;
+    padding: 15px 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+}
+.sobre > button:hover{
+    background-color: transparent;
+    border: 1px solid var(--cor3);
+    color: var(--cor3);
+}
+.sobre > button > a{
+    color: var(--cor2);
+    font-size: 1em;
+    font-weight: 900;
+    text-decoration: none;
+}
+.sobre > button > a:hover{
+    color: var(--cor3);
+}
+
+/* Skills/Habilidades Tech */
+.skills > .linguagens{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 60%;
+    margin: 15px auto;
+}
+.skills > .linguagens > .card-ling{
+    background-color: var(--cor3);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    height: 280px;
+    transition: all 300ms ease-in-out;
+}
+.skills > .linguagens > .card-ling:hover{
+    transform: scale(1.10);
+}
+.skills > .linguagens > .card-ling .card-desc > p{
+    color: var(--cor2);
+    margin: 15px 0;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Responsividade */
+/* Celulares */
+@media (min-width: 320px) and (max-width: 768px){
+    /* Menu desktop */
+    .menu-desktop{
+        display: none;
+    }
+
+    /* Botão do menu */
+    .botao-menu{
+        display: block;
+    }
+
+    /* Abrir menu */
+    .abrir-menu{
+        margin-left: 0;
+        opacity: 1;
+    }
+}
