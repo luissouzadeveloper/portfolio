@@ -9,13 +9,14 @@
     --cor1: #000;
     --cor2: #fff;
     --cor3: #4469ef;
+    --cor4: #222;
 
     --fonte: Arial, Helvetica, sans-serif;
 }
 
 /* Body */
 body{
-    background-color: #222;
+    background-color: var(--cor4);
     font-family: var(--fonte);
 }
 
@@ -98,14 +99,17 @@ main{
 
 /* Seções */
 section{
-    background-color: var(--cor2);
+    background-color: var(--cor4);
     padding: 30px 15px;
+}
+section > p{
+    color: var(--cor2);
 }
 
 /* Subtítulo */
 .subtitulo-h2{
     font-size: 2.5em;
-    color: var(--cor3);
+    color: var(--cor2);
     margin-bottom: 20px;
 }
 
@@ -148,8 +152,9 @@ section{
     font-size: 1.2em;
 }
 .sobre > button{
-    background-color: var(--cor3);
+    background-color: var(--cor2);
     border: none;
+    border: 1px solid var(--cor2);
     padding: 15px 30px;
     margin-top: 20px;
     border-radius: 10px;
@@ -158,17 +163,16 @@ section{
 }
 .sobre > button:hover{
     background-color: transparent;
-    border: 1px solid var(--cor3);
     color: var(--cor3);
 }
 .sobre > button > a{
-    color: var(--cor2);
+    color: var(--cor4);
     font-size: 1em;
     font-weight: 900;
     text-decoration: none;
 }
 .sobre > button > a:hover{
-    color: var(--cor3);
+    color: var(--cor2);
 }
 
 /* Skills/Habilidades Tech */
@@ -181,7 +185,7 @@ section{
     margin: 15px auto;
 }
 .skills > .linguagens > .card-ling{
-    background-color: var(--cor3);
+    background-color: var(--cor2);
     margin: 10px;
     padding: 15px;
     border-radius: 10px;
@@ -192,7 +196,7 @@ section{
     transform: scale(1.10);
 }
 .skills > .linguagens > .card-ling .card-desc > p{
-    color: var(--cor2);
+    color: var(--cor4);
     margin: 15px 0;
     font-weight: bold;
     font-size: 1.2em;
