@@ -118,6 +118,11 @@ section > p{
     text-align: center;
 }
 
+/* Imagens */
+img{
+    width: 100%;
+}
+
 .espaco{
     height: 11vh;
 }
@@ -181,7 +186,7 @@ section > p{
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    width: 60%;
+    width: 100%;
     margin: 15px auto;
 }
 .skills > .linguagens > .card-ling{
@@ -192,7 +197,7 @@ section > p{
     height: 280px;
     transition: all 300ms ease-in-out;
 }
-.skills > .linguagens > .card-ling:hover{
+.skills > .linguagens > .card-ling:hover, .container-certificacoes .card-certificacao:hover{
     transform: scale(1.10);
 }
 .skills > .linguagens > .card-ling .card-desc > p{
@@ -200,6 +205,49 @@ section > p{
     margin: 15px 0;
     font-weight: bold;
     font-size: 1.2em;
+}
+
+/* Certificações */
+.container-certificacoes{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    margin: 15px auto;
+}
+.container-certificacoes .card-certificacao{
+    background-color: var(--cor2);
+    margin: 10px;
+    padding: 15px;
+    width: 25%;
+    border-radius: 10px;
+    transition: all 300ms ease-in-out;
+}
+.container-certificacoes .card-certificacao > figure > figcaption{
+    color: var(--cor4);
+    font-weight: bold;
+    margin-top: 15px;
+}
+.certificacoes > button{
+    padding: 15px 30px;
+    cursor: pointer;
+    border: 1px solid var(--cor2);
+    background-color: var(--cor2);
+    border-radius: 10px;
+    transition: all 500ms ease-in-out;
+}
+.certificacoes > button:hover{
+    background-color: transparent;
+}
+.certificacoes > button > a{
+    color: var(--cor4);
+    font-size: 1em;
+    font-weight: 900;
+    text-decoration: none;
+}
+.certificacoes > button > a:hover{
+    color: var(--cor2);
 }
 
 /* Responsividade */
