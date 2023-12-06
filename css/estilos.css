@@ -3,6 +3,15 @@
     margin: 0;
     padding: 0;
 }
+a{
+    text-decoration: none;
+}
+button{
+    cursor: pointer;
+}
+img{
+    width: 100%;
+}
 
 /* Variaveis de CSS */
 :root{
@@ -86,7 +95,6 @@ body{
     padding: 10px;
     border-radius: 10px;
     border: 1px solid var(--cor2);
-    cursor: pointer;
 }
 .botao-menu button i{
     color: var(--cor2);
@@ -97,6 +105,7 @@ main{
     border: 2px solid blue;
 }
 
+/* Formatações globais */
 /* Seções */
 section{
     background-color: var(--cor4);
@@ -118,13 +127,60 @@ section > p{
     text-align: center;
 }
 
-/* Imagens */
-img{
+/* Container das seções */
+.container-skills, .container-certificacoes, .container-projetos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
     width: 100%;
+    margin: 15px auto;
+}
+.card-skill, .card-certificacao, .card-projeto{
+    background-color: var(--cor2);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    width: 25%;
+    transition: all 300ms ease-in-out;
+}
+.card-skill:hover, .card-certificacao:hover, .card-projeto:hover{
+    transform: scale(1.10);
+}
+.card-skill > figcaption, .card-certificacao > figcaption, .card-projeto > figcaption{
+    color: var(--cor4);
+    margin: 15px 0;
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
 .espaco{
     height: 11vh;
+}
+
+/* Botões da página */
+.botao{
+    background-color: var(--cor2);
+    border: none;
+    border: 1px solid var(--cor2);
+    padding: 15px 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+}
+.botao:hover{
+    background-color: transparent;
+    color: var(--cor3);
+}
+.botao > a{
+    color: var(--cor4);
+    font-size: 1em;
+    font-weight: 900;
+    text-decoration: none;
+}
+.botao > a:hover{
+    color: var(--cor2);
 }
 
 /* Container de apresentação */
@@ -155,99 +211,6 @@ img{
     line-height: 1.5;
     text-align: center;
     font-size: 1.2em;
-}
-.sobre > button{
-    background-color: var(--cor2);
-    border: none;
-    border: 1px solid var(--cor2);
-    padding: 15px 30px;
-    margin-top: 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 500ms ease-in-out;
-}
-.sobre > button:hover{
-    background-color: transparent;
-    color: var(--cor3);
-}
-.sobre > button > a{
-    color: var(--cor4);
-    font-size: 1em;
-    font-weight: 900;
-    text-decoration: none;
-}
-.sobre > button > a:hover{
-    color: var(--cor2);
-}
-
-/* Skills/Habilidades Tech */
-.skills > .linguagens{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 100%;
-    margin: 15px auto;
-}
-.skills > .linguagens > .card-ling{
-    background-color: var(--cor2);
-    margin: 10px;
-    padding: 15px;
-    border-radius: 10px;
-    height: 280px;
-    transition: all 300ms ease-in-out;
-}
-.skills > .linguagens > .card-ling:hover, .container-certificacoes .card-certificacao:hover{
-    transform: scale(1.10);
-}
-.skills > .linguagens > .card-ling .card-desc > p{
-    color: var(--cor4);
-    margin: 15px 0;
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-/* Certificações */
-.container-certificacoes{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 100%;
-    margin: 15px auto;
-}
-.container-certificacoes .card-certificacao{
-    background-color: var(--cor2);
-    margin: 10px;
-    padding: 15px;
-    width: 25%;
-    border-radius: 10px;
-    transition: all 300ms ease-in-out;
-}
-.container-certificacoes .card-certificacao > figure > figcaption{
-    color: var(--cor4);
-    font-weight: bold;
-    margin-top: 15px;
-}
-.certificacoes > button{
-    padding: 15px 30px;
-    cursor: pointer;
-    border: 1px solid var(--cor2);
-    background-color: var(--cor2);
-    border-radius: 10px;
-    transition: all 500ms ease-in-out;
-}
-.certificacoes > button:hover{
-    background-color: transparent;
-}
-.certificacoes > button > a{
-    color: var(--cor4);
-    font-size: 1em;
-    font-weight: 900;
-    text-decoration: none;
-}
-.certificacoes > button > a:hover{
-    color: var(--cor2);
 }
 
 /* Responsividade */
