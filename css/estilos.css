@@ -11,6 +11,7 @@ button{
 }
 img{
     width: 100%;
+    border-radius: 5px;
 }
 
 /* Variaveis de CSS */
@@ -100,6 +101,10 @@ body{
     color: var(--cor2);
 }
 
+.espaco{
+    height: 11vh;
+}
+
 /* Principal */
 main{
     border: 2px solid blue;
@@ -144,18 +149,11 @@ section > p{
     width: 25%;
     transition: all 300ms ease-in-out;
 }
-.card-skill:hover, .card-certificacao:hover, .card-projeto:hover{
-    transform: scale(1.10);
-}
 .card-skill > figcaption, .card-certificacao > figcaption, .card-projeto > figcaption{
     color: var(--cor4);
     margin: 15px 0;
     font-weight: bold;
     font-size: 1.2em;
-}
-
-.espaco{
-    height: 11vh;
 }
 
 /* Botões da página */
@@ -181,6 +179,53 @@ section > p{
 }
 .botao > a:hover{
     color: var(--cor2);
+}
+
+.card-projeto > figcaption a{
+    background-color: var(--cor4);
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid var(--cor4);
+    color: var(--cor2);
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+}
+.card-projeto > figcaption a:hover{
+    background-color: transparent;
+    color: var(--cor4);
+}
+
+.contato > .container-contato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container-contato > .email, .local{
+    background-color: var(--cor2);
+    padding: 20px;
+    margin: 15px 10px;
+    width: 20%;
+    border-radius: 10px;
+    color: var(--cor4);
+}
+
+.email > .icon-desc, .local > .icon-desc{
+    margin-top: 10px;
+}
+
+.contato > .redes{
+    margin: 30px 0;
+}
+.redes > span{
+    margin: 0 15px;
+}
+.redes > span > a{
+    color: var(--cor2);
+    transition: all 400ms ease-in-out;
+}
+.redes > span > a:hover{
+    color:#a1a1a1;
 }
 
 /* Container de apresentação */
