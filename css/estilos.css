@@ -24,6 +24,11 @@ img{
     --fonte: Arial, Helvetica, sans-serif;
 }
 
+/* html */
+html{
+    scroll-behavior: smooth;
+}
+
 /* Body */
 body{
     background-color: var(--cor4);
@@ -256,6 +261,16 @@ section > p{
     line-height: 1.5;
     text-align: center;
     font-size: 1.2em;
+}
+
+/* Rodapé */
+.rodape{
+    padding: 30px 0;
+    background-color: var(--cor1);
+}
+.rodape > h3{
+    color: var(--cor2);
+    font-size: 1.8em;
 }
 
 /* Responsividade */
