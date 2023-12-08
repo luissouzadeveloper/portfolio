@@ -146,13 +146,19 @@ section > p{
     width: 100%;
     margin: 15px auto;
 }
-.card-skill, .card-certificacao, .card-projeto{
+.card-skill{
     background-color: var(--cor2);
     margin: 10px;
     padding: 15px;
     border-radius: 10px;
     width: 25%;
-    transition: all 300ms ease-in-out;
+}
+.card-certificacao, .card-projeto{
+    background-color: var(--cor2);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    width: 60%;
 }
 .card-skill > figcaption, .card-certificacao > figcaption, .card-projeto > figcaption{
     color: var(--cor4);
@@ -263,6 +269,21 @@ section > p{
     font-size: 1.2em;
 }
 
+/* Botão para topo */
+.seta{
+    background-color: var(--cor2);
+    display: inline;
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.seta a{
+    color: var(--cor4);
+}
+
 /* Rodapé */
 .rodape{
     padding: 30px 0;
@@ -290,5 +311,42 @@ section > p{
     .abrir-menu{
         margin-left: 0;
         opacity: 1;
+    }
+}
+@media (min-width: 320px) and (max-width: 480px){
+    /* Container das seções */
+    .container-skills, .container-certificacoes, .container-projetos{
+        flex-direction: column;
+    }
+    .card-skill, .card-certificacao, .card-projeto{
+        width: 80%;
+    }
+
+    /* Contato */
+    .container-contato > .email, .local{
+        width: 100%;
+    }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px){
+    
+    .card-skill, .card-certificacao, .card-projeto{
+        width: 55%;
+    }
+
+    /* Contato */
+    .container-contato > .email, .local{
+        width: 40%;
+    }
+}
+@media (min-width: 610px) and (max-width: 768px){
+    /* Container das seções */
+    #skills .card-skill{
+        width: 20%;
+    }
+
+    #certificacoes .card-certificacao, #projetos .card-projeto{
+        width: 100%;
     }
 }
